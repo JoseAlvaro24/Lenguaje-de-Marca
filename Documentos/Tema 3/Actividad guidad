@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {
+            background-color: #eee;
+            width: 200px;
+            height: 50px;
+            border: 1px dotted black;
+            overflow:visible
+        }
+    </style>
+
+</head>
+<body>
+    <main>
+        <section>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mollis libero nunc, quis rutrum augue iaculis eget. Nulla ornare justo vel luctus facilisis. Sed convallis quam sit amet suscipit ornare. Nullam libero elit, tristique sed eros eget, posuere auctor ante. Sed viverra, dui ut maximus mollis, tortor orci varius magna, non malesuada felis turpis vitae dui. Fusce aliquam eu mauris sit amet tempor. Phasellus elementum arcu sapien, id porta metus rhoncus sed. Quisque pharetra magna id sagittis posuere. Aliquam erat volutpat. Aenean sed leo tempor, varius nibh at, pharetra est. Praesent mattis libero libero, quis ultricies nisl efficitur ut. Donec pulvinar nulla orci, vitae fermentum mauris molestie molestie. Nam et accumsan magna. Nullam vulputate quis sapien ut convallis.
+        </section>
+    </main>
+</body>
+</html>

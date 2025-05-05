@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<personas>
+    <personba>
+      <nombre>Federico</nombre>
+      <edad>18</edad>
+      <pais>España</pais>
+      <telefono>555-8967</telefono>
+    </personba>
+    <persona>
+      <nombre>María</nombre>
+      <edad>17</edad>
+      <pais>Gran Bretaña</pais>
+      <telefono>41245-365</telefono>
+    </persona>
+</personas>

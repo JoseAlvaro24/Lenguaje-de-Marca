@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="protectora">
+        <xs:complexType>
+        <xs:sequence>
+            <xs:element name="nombre" maxOccurs="unbounded"/>
+            <xs:element name="direccion" maxOccurs="unbound"/>
+            <xs:element name="ubicacion" maxOccurs="unbounded"/>
+            <xs:element name="responsable">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="nombre"/>
+                        <xs:element name="contacto"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="animales">
+                <xs:complexType>
+                <xs:sequence>
+                <xs:element name="animal"></xs:element>
+                </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+
+<xs:complexType name="personas">
+<xs:attributeGroup ref="personAttr"/>
+</xs:complexType>
+
+
+<xs:attributeGroup name="personaAttr">
+<xs:attribute name="nombre" type="xs:string"> </xs:attribute>
+                    <xs:attribute name="edad" type="xs:positiveInteger"> </xs:attribute>
+                    <xs:attribute name="pais" type="xs:string"></xs:attribute>
+</xs:attributeGroup>
+</xs:schema>
+        
+    </xs:element>
+</xs:schema>

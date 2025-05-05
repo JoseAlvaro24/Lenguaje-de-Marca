@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE etiqueta [
+<!ELEMENT logs (log,categoria,descripcion,archivo,fecha)>
+<!ELEMENT log (categoria,descripcion,archivo,fecha)>
+<!ELEMENT log (#PCDATA)>
+<!ELEMENT categoria (#PCDATA)>
+<!ELEMENT descripcion (#PCDATA)>
+<!ELEMENT archivo (#PCDATA)>
+<!ELEMENT fecha (#PCDATA)>
+<!ELEMENT id (#PCDATA)>
+]>
+
+<logs>
+  <log>
+     <id>Identificación</id>
+     <categoria>Errores</categoria>
+     <descripcion>Errores en los archivos</descripcion>
+     <archivo>Tamaño</archivo>
+     <fecha>fecha de incidencia</fecha>
+  </log>
+</logs>

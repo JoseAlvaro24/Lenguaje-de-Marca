@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema:xmlns xs:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="personas">
+    <xs:complexType>
+      <xs:sequece>
+        <xs:element name="persona" Type="datosDePersona"
+                    maxOccurs="Unbounded"/>
+      </xs:sequece>
+    </xs:complexType>
+</xs:element>
+
+<x:complexType name="datosDePersona">
+    <xs:sequece>
+      <xs:group ref="datosBasicos"/>
+      <xs:element name="telefono" type="xs:string"/>
+    </xs:sequece>
+</x:complexType>
+
+
+<xs:group name="datosBasicos">
+    <x:sequence>
+      <xs:element name="nombre" Type="xs:string"/>
+      <xs:element name="edad" Type="xs:positiveInteger"/>
+      <xs:element name="pais" Type="xs:string"/>
+    </x:sequence>
+</xs:group>
+
+</xs:schema:xmlns>

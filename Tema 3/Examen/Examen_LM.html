@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen_Marcas</title>
+    <style>
+        body {
+    display: grid; 
+    grid-template-areas:
+        "header header header"
+        "nav article aside"
+        "footer footer footer";
+    grid-template-rows: 50px 1fr 50px; 
+    grid-template-columns: 20% 1fr 20%;
+    grid-gap: 5px;
+    height: 100vh;
+    margin: 0;
+}
+
+header, footer, article, nav, aside {
+    padding: 15px;
+    background: gray;
+    color: white;
+    text-align: center;
+}
+
+#header { grid-area: header; }
+#footer { grid-area: footer; }
+#article { grid-area: article; }
+#nav { grid-area: nav; }
+#aside { grid-area: aside; } 
+
+@media(min-width:480px){
+
+.flex-container{
+    display:flex;
+}
+}
+
+
+.nav{
+    background: gray;
+    flex: 1fr;
+}
+
+.aside{
+    background: gray;
+    flex: 480px;
+}
+
+.footer{
+    background: gray;
+}
+    </style>
+</head>
+<body>
+    <header id="header">Cabecera</header>
+    <nav id="nav">Nav</nav>
+    <article id="article">Articulos</article>
+    <aside id="aside">Eventos</aside>
+    <footer id="footer">Pie</footer>
+</body>
+</html>

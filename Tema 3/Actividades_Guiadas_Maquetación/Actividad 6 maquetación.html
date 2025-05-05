@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 6</title>
+<style>
+    #main {
+        display: flex;
+        min-height: calc(100vh - 30vh);
+
+        }
+    #main > article {
+        flex: 1;
+    }
+    #main > nav,
+    #main > aside {
+        flex: 0 0 20vw;
+        background-color: beige;
+    }
+    body {
+        margin: 0;
+       
+
+    }
+    header, footer {
+        background-color: gray;
+        height: 15vh;
+    }
+    header, footer, article, nav, aside {
+        padding: 1em;
+    }
+   #main > nav {
+        order: -1;
+    }
+    * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    
+</style>
+</head>
+<body>
+    <header>Encabezado</header>
+    <div id="main">
+        <article>Articulo</article>
+         <nav>Nav</nav>
+         <aside>aside</aside>
+    </div>
+</body>
+<footer>
+   Footer
+</footer>
+</html>

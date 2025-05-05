@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+
+
+// Examen sobre XML, XSD y DTD - Temática de Carreras de Coches
+
+
+// Pregunta 1 - XML
+::Pregunta 1::
+¿Qué etiqueta en un documento XML es adecuada para almacenar la información de un coche de carrera?
+{
+    =<car>
+    ~<race>
+    ~<vehicle>
+    ~<driver>
+}
+
+// Pregunta 2 - XML
+::Pregunta 2::
+En el siguiente fragmento XML, ¿qué tipo de información se está representando?
+<race>
+    <car>
+        <model>Ferrari</model>
+        <year>2020</year>
+        <driver>Charles Leclerc</driver>
+    </car>
+    <car>
+        <model>Mercedes</model>
+        <year>2021</year>
+        <driver>Lewis Hamilton</driver>
+    </car>
+</race>
+{
+    =Información sobre coches y pilotos en una carrera
+    ~Información sobre los resultados de una carrera
+    ~Información sobre el calendario de carreras
+    ~Información sobre la estrategia de equipos
+}
+
+// Pregunta 3 - XSD
+::Pregunta 3::
+En un esquema XSD, ¿cuál es la forma correcta de declarar que el año de un coche debe ser un número entero de 4 dígitos?
+{
+    =<xs:element name="year" type="xs:int">
+        <xs:restriction base="xs:int">
+            <xs:minInclusive value="1000"/>
+            <xs:maxInclusive value="9999"/>
+        </xs:restriction>
+    </xs:element>
+    ~<xs:element name="year" type="xs:int"/>
+    ~<xs:element name="year" type="xs:string"/>
+    ~<xs:element name="year" type="xs:decimal"/>
+}
+
+// Pregunta 4 - XSD
+::Pregunta 4::
+En XSD, ¿cómo puedes definir un atributo "driver" que debe ser una cadena de texto con un máximo de 50 caracteres?
+{
+    =<xs:attribute name="driver" type="xs:string" maxLength="50"/>
+    ~<xs:attribute name="driver" type="xs:string" minLength="50"/>
+    ~<xs:attribute name="driver" type="xs:string" length="50"/>
+    ~<xs:attribute name="driver" type="xs:string"/>
+}
+
+// Pregunta 5 - DTD
+::Pregunta 5::
+En una definición DTD, ¿cómo se declara un atributo "team" para que sea obligatorio y de tipo cadena?
+{
+    =<!ATTLIST car team CDATA #REQUIRED>
+    ~<!ATTLIST car team ID #REQUIRED>
+    ~<!ATTLIST car team ENTITY #IMPLIED>
+    ~<!ATTLIST car team NMTOKEN #REQUIRED>
+}
+
+// Pregunta 6 - DTD
+::Pregunta 6::
+En DTD, ¿cuál es la declaración correcta para definir un elemento "race" que contiene al menos un "car"?
+{
+    =<!ELEMENT race (car+)>
+    ~<!ELEMENT race (car)>
+    ~<!ELEMENT race (car*)>
+    ~<!ELEMENT race (car?)>
+}
+
+// Pregunta 7 - XML
+::Pregunta 7::
+¿Qué declaración en XML es correcta para representar una lista de coches con sus pilotos en una carrera?
+{
+    =<race>
+        <car>
+            <model>Ferrari</model>
+            <driver>Charles Leclerc</driver>
+        </car>
+        <car>
+            <model>Mercedes</model>
+            <driver>Lewis Hamilton</driver>
+        </car>
+    </race>
+    ~<race>
+        <car>Ferrari</car>
+        <car>Mercedes</car>
+    </race>
+    ~<race>
+        <cars>Ferrari, Mercedes</cars>
+        <drivers>Charles Leclerc, Lewis Hamilton</drivers>
+    </race>
+    ~<race>
+        <car>
+            <model>Ferrari</model>
+        </car>
+    </race>
+}
+
+// Pregunta 8 - XSD
+::Pregunta 8::
+En un esquema XSD, ¿cómo definirías un elemento "lapTime" que debe ser un número decimal?
+{
+    =<xs:element name="lapTime" type="xs:decimal"/>
+    ~<xs:element name="lapTime" type="xs:int"/>
+    ~<xs:element name="lapTime" type="xs:string"/>
+    ~<xs:element name="lapTime" type="xs:boolean"/>
+}
+
+// Pregunta 9 - XML
+::Pregunta 9::
+¿Cuál es el valor del atributo "marca" en el siguiente XML?
+<car marca="Ferrari" year="2025">
+    <driver>Lewis Hamilton</driver>
+</car>
+{
+    =Ferrari
+    ~Lewis Hamilton
+    ~2025
+    ~car
+}
+
+// Pregunta 10 - DTD
+::Pregunta 10::
+En DTD, ¿cómo puedes definir que un elemento "driver" solo puede contener texto?
+{
+    =<!ELEMENT driver #PCDATA>
+    ~<!ELEMENT driver CDATA>
+    ~<!ELEMENT driver EMPTY>
+    ~<!ELEMENT driver (name)>
+}
+
+// Pregunta 11 - XML
+::Pregunta 11::
+En el siguiente fragmento XML, ¿qué es lo que se está describiendo?
+<car>
+    <model>Ferrari</model>
+    <driver>Charles Leclerc</driver>
+    <team>Scuderia Ferrari</team>
+</car>
+{
+    =Un coche de Fórmula 1 con su modelo, conductor y equipo
+    ~Un piloto de Fórmula 1 y su equipo
+    ~Un coche de Fórmula 1 con su velocidad máxima
+    ~Una carrera de Fórmula 1 con varios coches
+}
+
+// Pregunta 12 - XSD
+::Pregunta 12::
+¿Cuál es la forma correcta de declarar un tipo "lap" con un atributo "time" y un valor de texto dentro en XSD?
+{
+    =<xs:element name="lap">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="time" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    ~<xs:element name="lap">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="time" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    ~<xs:element name="lap">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="time" type="xs:decimal"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    ~<xs:element name="lap">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="time" type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+}
+
+// Pregunta 13 - DTD
+::Pregunta 13::
+En DTD, ¿cómo se define un elemento "car" que debe contener un atributo "speed" de tipo numérico?
+{
+    =<!ATTLIST car speed CDATA #REQUIRED>
+    ~<!ELEMENT car speed CDATA>
+    ~<!ELEMENT car speed (CDATA)>
+    ~<!ATTLIST car speed ENTITY #IMPLIED>
+}
+
+// Pregunta 14 - XSD
+::Pregunta 14::
+¿Cómo se define en XSD que un elemento "laps" puede contener varios elementos "lap"?
+{
+    =<xs:element name="laps">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="lap" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    ~<xs:element name="laps">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="lap"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    ~<xs:element name="laps" maxOccurs="unbounded">
+        <xs:element name="lap"/>
+    </xs:element>
+    ~<xs:element name="laps">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="lap" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+}
+
+// Pregunta 15 - XML
+::Pregunta 15::
+¿Qué significa la declaración `<?xml version="1.0" encoding="UTF-8"?>` al inicio de un documento XML?
+{
+    =Especifica la versión de XML y la codificación de caracteres
+    ~Especifica el tipo de esquema que debe usarse
+    ~Especifica la ubicación del archivo XSD
+    ~Especifica el espacio de nombres del XML
+}
+
+// Pregunta 16 - DTD
+::Pregunta 16::
+En DTD, ¿cómo se define un atributo "year" como obligatorio para un coche?
+{
+    =<!ATTLIST car year CDATA #REQUIRED>
+    ~<!ATTLIST car year #IMPLIED>
+    ~<!ATTLIST car year NMTOKEN #REQUIRED>
+    ~<!ATTLIST car year ID #IMPLIED>
+}
+
+// Pregunta 17 - XSD
+::Pregunta 17::
+¿Cómo se declara en XSD que un elemento "team" es de tipo cadena de texto?
+{
+    =<xs:element name="team" type="xs:string"/>
+    ~<xs:element name="team" type="xs:int"/>
+    ~<xs:element name="team" type="xs:boolean"/>
+    ~<xs:element name="team" type="xs:decimal"/>
+}
+
+// Pregunta 18 - XML
+::Pregunta 18::
+¿Qué es un "espacio de nombres" en XML?
+{
+    =Es un prefijo asociado a una URI para diferenciar elementos con el mismo nombre en diferentes contextos
+    ~Es una etiqueta utilizada para agrupar los elementos de un archivo XML
+    ~Es una extensión de XML para integrar otros lenguajes
+    ~Es una propiedad que define la codificación de los caracteres
+}
+
+// Pregunta 19 - XSD
+::Pregunta 19::
+¿Cómo se puede declarar en XSD un atributo "team" que solo puede tener los valores "Ferrari", "Mercedes", "Red Bull"?
+{
+    =<xs:restriction base="xs:string">
+        <xs:enumeration value="Ferrari"/>
+        <xs:enumeration value="Mercedes"/>
+        <xs:enumeration value="Red Bull"/>
+    </xs:restriction>
+    ~<xs:restriction base="xs:string">
+        <xs:enumeration value="1"/>
+        <xs:enumeration value="2"/>
+        <xs:enumeration value="3"/>
+    </xs:restriction>
+    ~<xs:restriction base="xs:string">
+        <xs:minLength value="5"/>
+    </xs:restriction>
+    ~<xs:restriction base="xs:string">
+        <xs:maxLength value="10"/>
+    </xs:restriction>
+}
+
+// Pregunta 20 - DTD
+::Pregunta 20::
+En DTD, ¿qué significa el símbolo "*" después de un elemento?
+{
+    =El elemento puede aparecer cero o más veces
+    ~El elemento debe aparecer al menos una vez
+    ~El elemento no puede aparecer más de una vez
+    ~El elemento solo puede aparecer una vez
+}
+
+// Pregunta 21 - XML
+::Pregunta 21::
+¿Cómo se garantiza que un archivo XML cumple con un esquema XSD?
+{
+    =Incluir el atributo `xsi:schemaLocation` en la etiqueta raíz
+    ~Incluir el atributo `xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"`
+    ~Incluir una declaración de tipo `xs:schema`
+    ~Incluir la referencia al archivo XSD en la etiqueta `xsi:schemaLocation`
+}
+
+// Pregunta 22 - DTD
+::Pregunta 22::
+¿Cuál es la forma correcta de declarar en DTD que un "car" debe tener un atributo "model" de tipo texto?
+{
+    =<!ATTLIST car model CDATA #REQUIRED>
+    ~<!ATTLIST car model NMTOKEN #REQUIRED>
+    ~<!ELEMENT car model CDATA>
+    ~<!ELEMENT car model (CDATA)>
+}
+
+// Pregunta 23 - XSD
+::Pregunta 23::
+¿Cómo se define un elemento en XSD como obligatorio?
+{
+    =<xs:element name="car" minOccurs="1"/>
+    ~<xs:element name="car" minOccurs="0"/>
+    ~<xs:element name="car" maxOccurs="unbounded"/>
+    ~<xs:element name="car" maxOccurs="1"/>
+}
+
+// Pregunta 24 - XML
+::Pregunta 24::
+¿Cuál es la ventaja de utilizar XML en el ámbito de las carreras de coches?
+{
+    =Permite intercambiar datos de manera estandarizada entre diferentes sistemas
+    ~Solo puede ser utilizado en aplicaciones de bases de datos
+    ~Es más rápido que otros formatos como JSON
+    ~Solo puede ser utilizado para representar datos estáticos
+}
+
+// Pregunta 25 - XSD
+::Pregunta 25::
+¿Cómo puedes indicar en XSD que un elemento "car" puede tener varios atributos de tipo "string"?
+{
+    =<xs:sequence>
+        <xs:element name="car" maxOccurs="unbounded">
+            <xs:element name="attribute" type="xs:string"/>
+        </xs:element>
+    </xs:sequence>
+    ~<xs:element name="car" maxOccurs="unbounded">
+        <xs:attribute name="attribute" type="xs:string"/>
+    </xs:element>
+    ~<xs:element name="car" minOccurs="1" type="xs:string"/>
+    ~<xs:sequence>
+        <xs:element name="car" maxOccurs="unbounded">
+            <xs:element name="attribute" type="xs:int"/>
+        </xs:element>
+    </xs:sequence>
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="Actividad_10.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+
+<Personas>
+    <Datos>
+        <nombre name="Eva"/>
+        <edad name="25"/>
+        <ciudad name="Paris"/>
+    </Datos>
+    <Datos>
+        <nombre name="Giovanni"/>
+        <edad name="26"/>
+        <ciudad name="florencia"/>
+    </Datos>
+</Personas>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE protectora [
+    <!ELEMENT protectora (nombre , direccion, ubicacion , responsable , animales )>
+    <!ATTLIST protectora id CDATA #REQUIRED>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT direccion (#PCDATA)>
+    <!ELEMENT ubicacion (#PCDATA)>
+    <!ELEMENT responsable (nombre , contacto)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT contacto (#PCDATA)>
+    <!ELEMENT animales (animal)>
+    <!ATTLIST animales min + #FIXED>
+    <!ELEMENT animal (nombre , especie , estado , foto)>
+    <!ATTLIST animal id ID #REQUIRED>
+    <!ATTLIST animal edad ID #REQUIRED>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT especie (#PCDATA)>
+    <!ELEMENT estado (#PCDATA)>
+    <!ATTLIST estado estado ID #IMPLIED>
+    <!ATTLIST Foto foto ID #IMPLIED>
+    <!ELEMENT Foto (#PCDATA)>
+]>
+
+
+
+
+
+<protectora id="Protectora Santos">
+    <nombre>Prtectora Animales</nombre>
+    <direccion>C/Sevilla</direccion>
+    <ubicacion>Cordoba</ubicacion>
+    <responsable>
+        <nombre>Hugo</nombre>
+        <contacto>657982826</contacto>
+    </responsable> 
+    <animales min="1">
+    <animal id="4" edad="3">
+        <nombre>Limon</nombre>
+        <especie>Perro</especie>
+        <estado>Bueno</estado>
+        <Foto>.jpg</Foto>
+    </animal>
+</animales>
+</protectora>

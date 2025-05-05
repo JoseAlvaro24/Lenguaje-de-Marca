@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cine [
+  <!ELEMENT peliculas (pelicula+)>
+  <!ELEMENT pelicula (titulo,director,autor?)>
+  <!ELEMENT titulo (#PCDATA)>
+  <!ELEMENT director (#PCDATA)>
+  <!ELEMENT autor (#PCDATA)>
+  <!ELEMENT autores (actor|actriz)+>
+  <!ELEMENT actor (#PCDATA)>
+  <!ELEMENT actriz (#PCDATA)>
+]>
+
+<peliculas>
+<pelicula>
+    <titulo>Con faldas y a lo loco</titulo>
+    <director>Billy Wilder</director>
+    <autor>Vharles Lederer</autor>
+    <actores>
+      <actor>Tony Curtis</actor>
+      <actor>Jack Lemmon</actor>
+      <actriz>Marilyn Monroe</actriz>
+    </actores>
+</pelicula>
+<pelicula>
+    <titulo>Leo McCarey</titulo>
+    <director>Sopa de Ganso</director>
+    <autores>
+      <actor></actor>
+    </autores>
+</pelicula>
+</peliculas>

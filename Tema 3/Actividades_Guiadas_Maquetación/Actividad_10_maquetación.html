@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad_10_maquetación</title>
+</head>
+<style>
+
+
+main, header, section,aside, footer{
+        margin: 0px;
+        border: solid 1px black;
+        color: white;
+    }
+
+
+
+
+    .main{
+        background: gray;
+        padding: 10px;
+        
+    }
+
+    .header{
+        background: red;
+    }
+
+    .hero{
+        background: rgb(255, 238, 0);
+    }
+
+@media(min-width:640px){
+
+    .flex-container{
+        display:flex;
+    }
+}
+
+    .section{
+        background: green;
+        flex: 1fr;
+    }
+
+    .aside{
+        background: blueviolet;
+        flex: 320px;
+    }
+
+    .footer{
+        background: grey;
+    }
+
+    
+</style>
+<body>
+    <main class="main">
+        Main
+        <header class="header">Header
+
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+        </header>
+        <section class="hero">
+            Hero
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi vero quas eum! Possimus unde incidunt, natus saepe, officia cum fugit, soluta placeat optio dolore aliquam sequi voluptate iste molestiae esse?</p>
+
+        </section>
+
+        <div class="flex-container">
+        <section class="section">
+            Content
+
+            <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris sed suscipit tellus. Proin auctor felis et sapien pulvinar, a gravida ipsum aliquet. Praesent vestibulum neque sit amet libero hendrerit sodales. Nulla in vulputate magna, porta ultrices ex. Nam sodales, urna et dignissim rhoncus, risus massa hendrerit lectus, dictum euismod lorem tortor vitae felis. Etiam elementum metus nisl, vitae vehicula sem efficitur eget. Mauris sed mauris non diam tincidunt sagittis quis id urna. Donec nulla libero, dignissim quis ligula ac, posuere convallis ante. Sed eget leo sed lorem interdum posuere sit amet sit amet nisi. Suspendisse ut lacinia odio.</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id odio tempora at sequi quia qui officia nemo eum totam itaque quas dignissimos aperiam et inventore fugit eligendi consequatur, in consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit veniam ipsam nisi ab assumenda nihil numquam enim aut in ducimus autem voluptatem corporis eos vero ipsum ullam, dolorum ratione quibusdam.</p>
+        </section>
+
+        <aside class="aside">
+            SlideBar
+
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore earum voluptas fugit.</p>
+
+        </aside>
+    </div>
+        <footer class="footer">
+            Footer
+
+            <p>Dolorum ratione quibusdam.</p>
+        </footer>
+    </main>
+</body>
+</html>
